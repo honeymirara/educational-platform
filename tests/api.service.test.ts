@@ -31,6 +31,7 @@ describe('registrationUser', () => {
     })
 })
 
+
 describe('registrationUser', () => {
     test('success', async () => {
         const testGetByEmail = jest.spyOn(repository, 'getByEmailDB');
@@ -55,6 +56,25 @@ describe('registrationUser', () => {
             "email": "test@gmail",
             "pwd": "78dh7h2i9xa2e"
         }])
+    })
+    test('error', async () => {
+        const mockGetByEmail = jest.spyOn(repository, "getByEmailDB");
+        mockGetByEmail.mockResolvedValue([{
+            id: 2,
+            "name": "hbgj",
+            "surname": "jhu",
+            "email": "gvyf@gmail",
+            "pwd": "yguyhv780se",
+        }])
+
+        try {
+            await registrationUser("hbgj", "jhu", "gvyf@gmail", "yguyhv780se");
+
+        } catch (err: any) {
+            expect(mockGetByEmail).toBeCalled()
+            expect(mockGetByEmail).toHaveBeenCalledWith("gvyf@gmail")
+            expect(err.message).toBe('user with this email already exists')
+        }
     })
 })
 
@@ -83,5 +103,17 @@ describe('authorization', () => {
             "pwd": "yguyhv780se",
 
         }])
+    })
+
+    test('success', async () => {
+        const testFound = jest.spyOn(repository, "getByEmailDB");
+
+
+        testFound.mockResolvedValue([]);
+        try {
+            await authorizationUser("gvyf@gmail", "yguyhv780se");
+        } catch (err: any) {
+            expect(err.message).toBe('this user does not exist')
+        }
     })
 })
