@@ -57,3 +57,31 @@ describe('registrationUser', () => {
         }])
     })
 })
+
+describe('authorization', () => {
+    test('success', async () => {
+        const testAuthorizationUser = jest.spyOn(repository, 'getByEmailDB');
+        const testMatched = jest.spyOn(bcrypt, 'compare');
+
+        testAuthorizationUser.mockResolvedValue([{
+            id: 2,
+            "name": "hbgj",
+            "surname": "jhu",
+            "email": "gvyf@gmail",
+            "pwd": "yguyhv780se",
+
+        }])
+
+        testMatched.mockResolvedValue("yguyhv780se");
+
+        const result = await authorizationUser("gvyf@gmail", "yguyhv780se");
+        expect(result).toEqual([{
+            id: 2,
+            "name": "hbgj",
+            "surname": "jhu",
+            "email": "gvyf@gmail",
+            "pwd": "yguyhv780se",
+
+        }])
+    })
+})
