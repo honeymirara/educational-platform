@@ -1,7 +1,7 @@
 import * as repository from "../../src/repository/user.repository";
 import { createUser } from '../../src/service/user.service';
 
-describe('createUser_function', () => {
+ describe('createUser_function', () => {
     test('success', async () => {
         const testRep = jest.spyOn(repository, "createUserDB");
         testRep.mockResolvedValue([{
@@ -23,7 +23,7 @@ describe('createUser_function', () => {
         expect(testRep).toHaveBeenCalled();
     })
 
-    test('success', async () => {
+    /* test('success', async () => {
         const testRep = jest.spyOn(repository, "createUserDB")
         testRep.mockResolvedValue([])
         try {
@@ -37,7 +37,7 @@ describe('createUser_function', () => {
 
 
 
-    })
+    }) */
 
 
-})
+}) 

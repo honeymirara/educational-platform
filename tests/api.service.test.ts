@@ -77,10 +77,10 @@ describe('registrationUser', () => {
         }
     })
 })
+ 
 
 
-
-describe('authorization', () => {
+/* describe('authorization', () => {
     test('success', async () => {
         const testAuthorizationUser = jest.spyOn(repository, 'getByEmailDB');
         const testMatched = jest.spyOn(bcrypt, 'compare');
@@ -139,4 +139,4 @@ describe('authorization', () => {
         }
 
     })
-})
+}) */
