@@ -78,6 +78,8 @@ describe('registrationUser', () => {
     })
 })
 
+
+
 describe('authorization', () => {
     test('success', async () => {
         const testAuthorizationUser = jest.spyOn(repository, 'getByEmailDB');
@@ -115,5 +117,26 @@ describe('authorization', () => {
         } catch (err: any) {
             expect(err.message).toBe('this user does not exist')
         }
+    })
+
+    test('success', async () => {
+        const mockAuthorization = jest.spyOn(repository, 'getByEmailDB');
+        const mockBcrypt = jest.spyOn(bcrypt, 'compare');
+
+        mockAuthorization.mockResolvedValue([{
+            id: 2,
+            "name": "hbgj",
+            "surname": "jhu",
+            "email": "gvyf@gmail",
+            "pwd": "yguyhv780se",
+        }])
+        mockBcrypt.mockResolvedValue(false);
+
+        try {
+            await authorizationUser("gvyf@gmail", "yguyhv780se")
+        } catch (err: any) {
+            expect(err.message).toBe('this user does not exist')
+        }
+
     })
 })
