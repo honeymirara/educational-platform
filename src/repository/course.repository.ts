@@ -52,7 +52,7 @@ async function updateCourseDB(id, title) {
     return result;
 }
 
-async function deleteCourseDB(title, id) {
+async function deleteCourseDB(id) {
 const client = await pool.connect();
 const sql = 'DELETE FROM courses WHERE id = $1 RETURNING*';
 const result = (await client.query(sql, [id])).rows;

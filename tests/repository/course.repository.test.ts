@@ -61,7 +61,7 @@ describe('updateCourse', () => {
 describe('deleteCourse', () => {
     test('success', async () => {
         client.query.mockResolvedValue({ rows: [{ id: 3, title: 'php' }] });
-        const result = await deleteCourseDB(3, 'php');
+        const result = await deleteCourseDB(3);
         expect(client.query).toHaveBeenCalled();
         expect(result).toEqual([{ id: 3, title: 'php' }]);
         expect(result.length).toBe(1);
