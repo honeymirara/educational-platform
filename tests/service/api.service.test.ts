@@ -1,5 +1,5 @@
-import * as repository from "../src/repository/api.repository";
-import { registrationUser, authorizationUser } from "../src/service/api.service"
+import * as repository from "../../src/repository/api.repository";
+import { registrationUser, authorizationUser } from "../../src/service/api.service"
 import bcrypt from "bcrypt"
 
 

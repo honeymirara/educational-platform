@@ -1,7 +1,7 @@
 import * as repository from "../../src/repository/user.repository";
 import { createUser } from '../../src/service/user.service';
 
- describe('createUser_function', () => {
+describe('createUser_function', () => {
     test('success', async () => {
         const testRep = jest.spyOn(repository, "createUserDB");
         testRep.mockResolvedValue([{
@@ -22,22 +22,4 @@ import { createUser } from '../../src/service/user.service';
         expect(result.length).toBe(1)
         expect(testRep).toHaveBeenCalled();
     })
-
-    /* test('success', async () => {
-        const testRep = jest.spyOn(repository, "createUserDB")
-        testRep.mockResolvedValue([])
-        try {
-            await createUser("test_name", "test_surname", "test@gmail", "test");
-
-        } catch (err: any) {
-
-            expect(err.message).toBe('does not exists');
-        }
-
-
-
-
-    }) */
-
-
 }) 
