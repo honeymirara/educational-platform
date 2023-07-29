@@ -26,7 +26,7 @@ afterEach(() => {
         expect(client.query).toHaveBeenCalled();
 
     }) 
-})  */ 
+})  */
 
 describe('testGetAllUser', () => {
     test('success', async () => {
@@ -43,6 +43,7 @@ describe('testGetUserById', () => {
         const result = await getUserByIdDB('Julia');
         expect(result).toEqual([{ id: 12, name: 'Julia', surname: 'Bala', email: 'hoho@gmail.com', pwd: 'asxhi75a' }])
         expect(client.query).toHaveBeenCalled();
+        expect(result.length).toBe(1);
     })
 })
 
