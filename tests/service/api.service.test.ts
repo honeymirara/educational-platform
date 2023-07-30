@@ -80,7 +80,7 @@ describe('registrationUser', () => {
  
 
 
-/* describe('authorization', () => {
+ describe('authorization', () => {
     test('success', async () => {
         const testAuthorizationUser = jest.spyOn(repository, 'getByEmailDB');
         const testMatched = jest.spyOn(bcrypt, 'compare');
@@ -135,8 +135,8 @@ describe('registrationUser', () => {
         try {
             await authorizationUser("gvyf@gmail", "yguyhv780se")
         } catch (err: any) {
-            expect(err.message).toBe('this user does not exist')
+            expect(err.message).toBe('password is wrong')
         }
 
     })
-}) */
+}) 

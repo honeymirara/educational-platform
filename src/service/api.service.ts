@@ -6,9 +6,7 @@ async function registrationUser(name: string, surname: string, email: string, pw
     const existingUser = await getByEmailDB(email);
 
     if (existingUser.length) throw new Error('user with this email already exists');
-    console.log('+');
     const hashed = await bcrypt.hash(pwd, 10);
-    console.log('+')
     const data = await registrationUserDB(name, surname, email, hashed);
     if (!data.length) throw new Error('user does not create');
     return data;
