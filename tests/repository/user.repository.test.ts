@@ -53,6 +53,7 @@ describe('testUpdateUserDB', () => {
         client.query.mockResolvedValue({ rows: [{ id: 12, name: 'Julie', surname: 'la', email: 'hoho@gmail.com', pwd: 'asxhi75a' }] });
         const result = await updateUserDB(12, 'Julie', 'la', 'hoho@gmail.com', 'asxhi75a');
         expect(result).toEqual([{ id: 12, name: 'Julie', surname: 'la', email: 'hoho@gmail.com', pwd: 'asxhi75a' }])
+        expect(result.length).toBe(1)
     })
 });
 
@@ -61,5 +62,6 @@ describe('testDeleteUserDB', () => {
         client.query.mockResolvedValue({ rows: [{ id: 12, name: 'Julie', surname: 'la', email: 'hoho@gmail.com', pwd: 'asxhi75a' }] });
         const result = await deleteUserDB(12)
         expect(result).toEqual([{ id: 12, name: 'Julie', surname: 'la', email: 'hoho@gmail.com', pwd: 'asxhi75a' }]);
+        expect(result.length).toBe(1)
     })
 })
