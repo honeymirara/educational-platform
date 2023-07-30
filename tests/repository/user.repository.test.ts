@@ -33,7 +33,8 @@ describe('testGetAllUser', () => {
         client.query.mockResolvedValue({ rows: [{ id: 12, name: 'Julia', surname: 'Bala', email: 'hoho@gmail.com', pwd: 'asxhi75a' }] });
         const result = await getAllUsersDB();
         expect(result).toEqual([{ id: 12, name: 'Julia', surname: 'Bala', email: 'hoho@gmail.com', pwd: 'asxhi75a' }])
-
+        expect(result.length).toBe(1);
+        expect(client.query).toHaveBeenCalled()
     })
 })
 
