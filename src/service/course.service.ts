@@ -1,4 +1,4 @@
-import { getAllCoursesDB, createCoursesDB, getCourseByIdDB } from "../repository/course.repository";
+import { getAllCoursesDB, createCoursesDB, getCourseByIdDB, updateCourseDB, deleteCourseDB } from "../repository/course.repository";
 import { iCourse } from '../interfaces/index'
 
 async function getAllCourses(): Promise<iCourse> {
@@ -18,5 +18,15 @@ async function getCourseById(id): Promise<iCourse> {
     return data;
 }
 
+async function updateCourse(id, title): Promise<iCourse>{
+    const data = await updateCourseDB(id, title);
+    if (!data) throw new Error('does not exists');
+    return data
+}
 
-export { getAllCourses, createCourses, getCourseById };
+async function deleteCourse(id): Promise<iCourse>{
+    const data = await deleteCourseDB(id);
+    return data;
+}
+
+export { getAllCourses, createCourses, getCourseById, updateCourse, deleteCourse};

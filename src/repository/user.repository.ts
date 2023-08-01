@@ -18,12 +18,13 @@ async function createUserDB(name,surname, email, pwd){
 async function getUserByIdDB(id): Promise<iUser[]> {
     const client = await pool.connect();
     try {
-        client.query('BEGIN');
+        await client.query('BEGIN');
         const sql = 'SELECT * FROM users WHERE id = $1'
         const result = (await client.query(sql, [id])).rows;
+        client.query('COMMIT');
         return result;
     } catch (err) {
-        client.query('ROLLBACK');
+       await  client.query('ROLLBACK');
         return [];
     }
 }
@@ -31,12 +32,13 @@ async function getUserByIdDB(id): Promise<iUser[]> {
 async function getAllUsersDB(): Promise<iUser[]> {
     const client = await pool.connect();
     try {
-        client.query('BEGIN');
+        await client.query('BEGIN');
         const sql = 'SELECT * FROM users';
         const result = (await client.query(sql)).rows
+        client.query('COMMIT');
         return result;
     } catch (err) {
-        client.query('ROLLBACK');
+       await  client.query('ROLLBACK');
         return [];
     }
 }
@@ -60,10 +62,10 @@ async function updateUserDB(name, surname, email, pwd, id): Promise<iUser[]> {
 async function deleteUserDB(id): Promise<iUser[]> {
     const client = await pool.connect();
     try {
-        client.query('BEGIN');
+       await  client.query('BEGIN');
         const sql = 'DELETE FROM users WHERE id = $1 RETURNING*'
         const result = (await client.query(sql, [id])).rows;
-        client.query('COMMIT');
+        await client.query('COMMIT');
         return result;
 
     } catch (err) {
