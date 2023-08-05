@@ -82,6 +82,18 @@
     letter-spacing: -0.8px;
 }
 
+.info .statistics{
+    display: flex;
+     align-items: center;
+}
+
+.info .statistics .thunder {
+    background: url('../../assets/Frame\ 35271.png');
+    width: 24px;
+    height: 30px;
+    
+}
+
 .wrapper .btns .info .statistics .students {
     color: #585858;
     font-family: Montserrat;
@@ -93,7 +105,7 @@
     letter-spacing: -0.64px;
 }
 
-.wrapper .btns .image {
+.wrapper .btns .PreviewImage {
     background: url('../../assets/Frame\ 25.png') no-repeat;
 
 }
@@ -192,6 +204,7 @@
     text-align: center;
     border-radius: 100px;
     background: #C3DCE3;
+
 }
 
 .knowledgeImg {
@@ -201,12 +214,74 @@
     height: 473px;
 }
 
-.knowledge .buttonKnlg {
+
+
+
+.progress {
+    width: 1220px;
+    margin: 6% auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress {
+    background-color: white;
+}
+
+.watch {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 1220px;
+    padding: 7% 0;
+
+}
+
+
+.informationText {
+    width: 475px;
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+}
+
+.informationText h1 {
+    color: black;
+    font: 400 48px 'Dela Gothic One';
+}
+
+.informationText p {
+    color: #757573;
+    font: 600 18px 'Montserrat';
+}
+
+.informationText .buttonWatch {
     width: 131px;
+    padding: 14px 0px;
+    color: #2B788B;
+    font: 700 16px 'Montserrat';
     text-align: center;
     border-radius: 100px;
-    background-color: #c3dce3;
-    color: #2b788b;
-    font: 700 16px "Montserrat";
-    padding: 14px 0 ;
-  }
+    background: #C3DCE3;
+}
+
+.watch .watchImg {
+    background: url(../../assets/image\ 1.png) no-repeat;
+    background-size: contain;
+    width: 680px;
+    height: 490px;
+}
+
+.watch .informationText {
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 6% 0;
+}

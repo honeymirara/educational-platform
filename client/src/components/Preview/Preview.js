@@ -20,9 +20,9 @@ export default function Header() {
                             <p>students</p>
                         </div>
                     </div>
-
+                    <div className={style.PreviewImage}></div>
                 </div>
-                <div className={style.PreviewImage}></div>
+               
             </div>
             <div className={style.wrapperBCG}>
                 <div className={style.language}>
@@ -41,9 +41,20 @@ export default function Header() {
                 <div className={style.knowledgeText}>
                     <h1>Increase your knowledge</h1>
                     <p>Traditional and new effective approaches to</p>
-                   <div className={style.bottonKnowledge}>Textbook</div>
+                    <div className={style.buttonKnowledge}>Textbook→</div>
                 </div>
                 <div className={style.knowledgeImg}></div>
+            </div>
+            <div className={style.progress}>
+                <div className={style.watch}>
+
+                    <div className={style.informationText}>
+                        <h1>Watch your progress every day</h1>
+                        <p>Save statistics on your achievements and mistakes</p>
+                        <div className={style.buttonWatch}>Statistics →</div>
+                    </div>
+                    <div className={style.watchImg}></div>
+                </div>
             </div>
         </div>
     )
