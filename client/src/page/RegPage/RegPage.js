@@ -6,6 +6,7 @@ export default function RegPage() {
     return (
         <div>
             <Header />
+            <div className={style.wrapper}></div>
             <Footer />
         </div >
 

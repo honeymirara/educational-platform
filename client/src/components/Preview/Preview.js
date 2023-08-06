@@ -15,7 +15,7 @@ export default function Header() {
                         <div className={style.statistics}>
                             <div>
                                 <div className={style.thunder}></div>
-                                <div >600<span>+</span></div>
+                                <div  className={style.count}>600<span>+</span></div>
                             </div>
                             <p>students</p>
                         </div>
