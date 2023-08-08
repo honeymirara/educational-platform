@@ -57,7 +57,7 @@ course.delete('/:id', async (req: Request, res: Response): Promise<void> => {
     try {
         const { id } = req.params;
         const data = await deleteCourse(id);
-        buildResponse(res, 404, data);
+        buildResponse(res, 200, data);
     } catch (err: any) {
         buildResponse(res, 404, err.message);
     }

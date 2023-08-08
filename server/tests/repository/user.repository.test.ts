@@ -18,7 +18,7 @@ afterEach(() => {
     jest.clearAllMocks()
 });
 
-/* describe('testCreateUser', () => {
+/*  describe('testCreateUser', () => {
     test('success', async () => {
         client.query.mockRejectedValue({ rows: [{ id: 13, name: 'lia', surname: 'Bla', email: 'ho@gmail.com', pwd: 'a737375a' }] })
         const result = await createUserDB('lia', 'Bla', 'ho@gmail.com', 'a737375a');
@@ -26,7 +26,7 @@ afterEach(() => {
         expect(client.query).toHaveBeenCalled();
 
     }) 
-})  */
+})   */
 
 describe('testGetAllUser', () => {
     test('success', async () => {

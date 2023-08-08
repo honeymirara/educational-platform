@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Raleway:wght@100;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@500;700&family=Montserrat:wght@300;600&family=Raleway:wght@100;500&display=swap');
+
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1220px;
+    margin: 6% auto;
+}
+
+.wrapper .btns {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.wrapper .btns .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+
+}
+
+.wrapper .btns .info p {
+    color: #2B788B;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    /* 16px */
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
+}
+
+.wrapper .btns .info h1 {
+    width: 500px;
+    color: black;
+    font-family: Dela Gothic One;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    /* 67.2px */
+    letter-spacing: -2.24px;
+
+}
+
+.wrapper .btns .info p {
+    color: #757575;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 25.2px */
+    letter-spacing: -0.72px;
+
+}
+
+.wrapper .btns .info .btnAbout {
+    display: flex;
+    padding: 14px 22px;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+    border-radius: 100px;
+    background: #C3DCE3;
+}
+
+.wrapper .btns .info .statistics {
+    color: #000;
+    font-family: Dela Gothic One;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    /* 40px */
+    letter-spacing: -0.8px;
+}
+
+.wrapper .btns .info .statistics .students {
+    color: #585858;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    /* 22.4px */
+    letter-spacing: -0.64px;
+}
+
+.wrapper .btns .image {
+    background: url('../../assets/Frame\ 25.png') no-repeat;
+
+}
+
+.preview {
+    color: #757575;
+    font: 600 18 Dela Gothic One;
+}
+
+
+.wrapperBCG {
+    background-color: white;
+}
+
+.language {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 1220px;
+    padding: 7% 0;
+
+}
+
+.language .information {
+    width: 480px;
+
+}
+
+.imgLanguage {
+    background: url('../../assets/image\ 8.png') no-repeat;
+    width: 580px;
+    height: 445px;
+    background-size: contain;
+}
+
+.btnImgs {
+    display: flex;
+    align-items: center;
+}
+
+.information h1 {
+    color: #000;
+    font: 400 48px Dela Gothic One;
+}
+
+.information p {
+    color: #757575;
+    font: 600 18px Monserrat;
+}
+
+.language .imgSprint {
+    width: 172px;
+    height: 145px;
+    background: url('../../assets/Group\ 11.png') no-repeat;
+    background-size: contain;
+}
+
+.language .imgTasks {
+    width: 172px;
+    height: 145px;
+    background: url('../../assets/Group\ 10.png') no-repeat;
+    background-size: contain;
+}
+
+.knowledge {
+    width: 1220px;
+    margin: 6% auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.knowledgeText {
+    width: 475px;
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+}
+
+.knowledgeText h1 {
+
+    color: black;
+    font: 400 48px 'Dela Gothic One';
+}
+
+.knowledgeText p {
+    color: #757573;
+    font: 600 18px 'Montserrat';
+}
+
+.knowledgeText .buttonKnowledge {
+    width: 131px;
+    padding: 14px 0px;
+    color: #2B788B;
+    font: 700 16px 'Montserrat';
+    text-align: center;
+    border-radius: 100px;
+    background: #C3DCE3;
+}
+
+.knowledgeImg {
+    background: url(../../assets/image\ 2.png) no-repeat;
+    background-size: contain;
+    width: 580px;
+    height: 473px;
+}
+
+.knowledge .buttonKnlg {
+    width: 131px;
+    text-align: center;
+    border-radius: 100px;
+    background-color: #c3dce3;
+    color: #2b788b;
+    font: 700 16px "Montserrat";
+    padding: 14px 0 ;
+  }

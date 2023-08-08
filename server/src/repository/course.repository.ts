@@ -1,7 +1,7 @@
 import pool from '../db';
 import { iCourse } from '../../src/interfaces/index'
 
-async function getAllCoursesDB() {
+async function getAllCoursesDB(){
     const client = await pool.connect();
     try {
         await client.query('BEGIN');

@@ -1,0 +1,65 @@
+.wrapper {
+    width: 1220px;
+    margin: 2% auto;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper .options div {
+    display: flex;
+    gap: 20px;
+}
+
+.wrapper .options div p {
+    margin: 5px 0;
+    color: var(--primaty-grey-dark, #757575);
+    font: 600 14px 'Montserrat';
+    
+
+}
+
+.wrapper .line {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 15px 0;
+    width: 100%;
+
+}
+
+.network {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.network p {
+    margin-left: 10px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.icons .gt {
+    background: url('../../assets/Frame\ 33.png') no-repeat;
+    width: 30px;
+    height: 24px;
+}
+
+.icons .kotik {
+    background: url('../../assets/Frame\ 30.png') no-repeat;
+    width: 30px;
+    height: 24px;
+}
+
+.icons .imgYoutube {
+    background: url('../../assets/Frame\ 31.png') no-repeat;
+    width: 30px;
+    height: 24px;
+}
