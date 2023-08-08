@@ -1,0 +1,30 @@
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info h1 {
+    width: 519px;
+    height: 71px;
+    color: #000;
+    font: 400 56px 'Dela Gothic One;'
+}
+
+.info div input {
+    border-radius: 2px;
+    border: 1px solid #ced4da;
+    height: 60px;
+    width: 519px;
+    padding: 6px 0px;
+    text-align: center;
+}
+
+.info .btn {
+    width: 110px;
+    padding: 14px 22px;
+    align-items: flex-start;
+    background: #2b788b;
+
+}
