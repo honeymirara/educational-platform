@@ -4,6 +4,12 @@ import style from './style.module.css'
 
 
 export default function RegPage() {
+    const arr = ['name', 'last name', 'email', 'pwd'];
+    const result = arr.map((el)=>(
+        <div>
+            <input type="text" placeholder={el}/>
+        </div>
+    ));
     return (
         <div>
             <Header />
@@ -11,18 +17,7 @@ export default function RegPage() {
                 <div className={style.info}></div>
                 <div className={style.signUp}>
                     <h1>Sign Up</h1>
-                    <div>
-                        <input type="text" />
-                    </div>
-                    <div>
-                        <input type="text" />
-                    </div>
-                    <div>
-                        <input type="text" />
-                    </div>
-                    <div >
-                        <input type="text" />
-                    </div>
+                   {result}
                     <div className={style.btn}>Sign Up</div>
                 </div>
 

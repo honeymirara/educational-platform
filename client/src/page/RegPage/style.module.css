@@ -23,7 +23,7 @@
     padding: 0px 12px;
     border-radius: 2px;
     border: 1px solid #ced4da;
-    text-align:center;
+
 }
 
 .wrapper .signUpImg {
@@ -38,6 +38,5 @@
     background: #2b788b;
     width: 110px;
     padding: 14px 22px;
-    text-align: center;
     color: #fff;
 }

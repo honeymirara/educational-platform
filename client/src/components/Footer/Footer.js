@@ -5,15 +5,15 @@ export default function Footer() {
         <div className={style.wrapper}>
             <div className={style.options}>
                 <div>
-                    <p>Home</p>
-                    <p>TextBook</p>
-                    <p>Statistics</p>
-                    <p>Sprint</p>
+                    {['Home', 'TextBook', 'Statistics', 'Sprint'].map((el) => (
+                        <p>{el}</p>
+                    ))}
                 </div>
                 <div>
-                    <p>Alex</p>
-                    <p>Gabrial</p>
-                    <p>Marcus</p>
+                    {['Alex', 'Gabrial', 'Marcus'].map((el) => (
+                        <p>{el}</p>
+                    ))}
+
                 </div>
             </div>
             <div className={style.line}> </div>
