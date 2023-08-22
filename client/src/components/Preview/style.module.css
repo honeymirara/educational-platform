@@ -90,7 +90,7 @@
 }
 
 .info .statistics .thunder {
-    background: url('../../assets/Frame\ 35271.png');
+    background: url('./assets/Frame\ 35271.png');
     width: 24px;
     height: 30px;
     display: inline-block;
@@ -114,7 +114,7 @@
 }
 
 .wrapper .btns .PreviewImage {
-    background: url('../../assets/Frame\ 25.png') no-repeat;
+    background: url('./assets/Frame\ 25.png') no-repeat;
 
 }
 
@@ -143,7 +143,7 @@
 }
 
 .imgLanguage {
-    background: url('../../assets/image\ 8.png') no-repeat;
+    background: url('./assets/image\ 8.png') no-repeat;
     width: 580px;
     height: 445px;
     background-size: contain;
@@ -167,14 +167,14 @@
 .language .imgSprint {
     width: 172px;
     height: 145px;
-    background: url('../../assets/Group\ 11.png') no-repeat;
+    background: url('./assets/Group\ 11.png') no-repeat;
     background-size: contain;
 }
 
 .language .imgTasks {
     width: 172px;
     height: 145px;
-    background: url('../../assets/Group\ 10.png') no-repeat;
+    background: url('./assets/Group\ 10.png') no-repeat;
     background-size: contain;
 }
 
@@ -216,7 +216,7 @@
 }
 
 .knowledgeImg {
-    background: url(../../assets/image\ 2.png) no-repeat;
+    background: url(./assets/image\ 2.png) no-repeat;
     background-size: contain;
     width: 580px;
     height: 473px;
@@ -275,7 +275,7 @@
 }
 
 .watch .watchImg {
-    background: url(../../assets/image\ 1.png) no-repeat;
+    background: url(./assets/image\ 1.png) no-repeat;
     background-size: contain;
     width: 680px;
     height: 490px;

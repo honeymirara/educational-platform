@@ -1,6 +1,7 @@
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import style from './style.module.css';
+import Input from '../../components/Input/Input'
 
 export default function AuthPage() {
     const arr = ["email", "pwd"];
@@ -15,7 +16,7 @@ export default function AuthPage() {
             <div className={style.login}>
                 <div className={style.info}>
                     <h1>Login</h1>
-                    {result}
+                    <Input arr = {arr}/>
                     <div className={style.btn}>Login</div>
 
                 </div>

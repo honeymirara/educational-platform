@@ -47,19 +47,19 @@
 }
 
 .icons .gt {
-    background: url('../../assets/Frame\ 33.png') no-repeat;
+    background: url('./assets/Frame\ 33.png') no-repeat;
     width: 30px;
     height: 24px;
 }
 
 .icons .kotik {
-    background: url('../../assets/Frame\ 30.png') no-repeat;
+    background: url('./assets/Frame\ 30.png') no-repeat;
     width: 30px;
     height: 24px;
 }
 
 .icons .imgYoutube {
-    background: url('../../assets/Frame\ 31.png') no-repeat;
+    background: url('./assets/Frame\ 31.png') no-repeat;
     width: 30px;
     height: 24px;
 }
