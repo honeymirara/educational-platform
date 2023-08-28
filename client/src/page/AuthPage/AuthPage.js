@@ -1,7 +1,9 @@
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import style from './style.module.css';
-import Input from '../../components/Input/Input'
+import Input from '../../components/Input/Input';
+
+
 
 export default function AuthPage() {
     const arr = ["email", "pwd"];

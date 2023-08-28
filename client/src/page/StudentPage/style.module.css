@@ -1,0 +1,13 @@
+.wrapper{
+    display: flex;
+    flex-direction: ;
+}
+
+.image{
+    background-image: url(./assets/Frame\ 8.png);
+    background-repeat: no-reapeat;
+    background-size: contain;
+    width: 167px;
+    height:32px;
+    border:1px solid black ;
+}

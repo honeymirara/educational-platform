@@ -3,7 +3,7 @@ import HomePage from './page/HomePage/Homepage'
 import { Routes, Route } from 'react-router-dom'
 import RegPage from './page/RegPage/RegPage'
 import AuthPage from './page/AuthPage/AuthPage';
-
+import StudentPage from './page/StudentPage/StudentPage';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Route path='/' element={<HomePage />}></Route>
       <Route path='/reg' element={<RegPage />}></Route>
       <Route path='/auth' element={<AuthPage />}></Route>
+      <Route path = '/student' element={<StudentPage/>}></Route>
     </Routes>
   );
 }
