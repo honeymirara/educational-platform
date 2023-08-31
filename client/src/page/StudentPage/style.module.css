@@ -1,13 +1,45 @@
-.wrapper{
+.container {
     display: flex;
-    flex-direction: ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.image{
+.image {
     background-image: url(./assets/Frame\ 8.png);
-    background-repeat: no-reapeat;
+    background-repeat: no-repeat;
     background-size: contain;
     width: 167px;
-    height:32px;
-    border:1px solid black ;
+    height: 32px;
+    border: 1px solid black;
+}
+
+.courseContainer {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 926px;
+    align-items: center;
+    margin: auto;
+}
+
+.imageCourse {
+    background: url(./assets/image\ 55.png) no-repeat;
+    width: 337px;
+    height: 216px;
+    padding: 40px 0px;
+    gap: 12px;
+}
+
+.list {
+    margin: auto;
+    width: 1220px;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+.informationCourse {
+    width: 510px;
+
 }
