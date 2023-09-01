@@ -7,22 +7,22 @@ export default function Footer() {
         <div className={style.wrapper}>
             <div className={style.options}>
                 <div>
-                    <Options arr={["home", "Textbook", "Statistics", "Sprint"]} />
+                    <Options data={['Home', 'Textbook', 'Statistics', 'Sprint']} />
                 </div>
+
                 <div>
-                    <Options arr={['Alex', 'Gabrial', 'Marcus']} /> </div>
-                <div>
+                    <Options data={['Alex', 'Gabriel', 'Marcus']} />
                 </div>
-                <div className={style.line}></div>
+
             </div>
+
             <div className={style.line}></div>
             <div className={style.network}>
                 <div className={style.icons}>
-                    <Icons arr={['gt', 'kotik', 'imgYoutube']} />
-
+                    <Icons data={['style.gt', 'style.kotik', 'style.imgYoutube']} />
                 </div>
                 <p>©2021 Hschool. Project for Hschool.</p>
             </div>
-        </div>
+        </div >
     )
 }

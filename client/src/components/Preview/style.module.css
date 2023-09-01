@@ -98,7 +98,7 @@
 
 .info .statistics .count {
     display: inline-block;
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 
@@ -115,6 +115,8 @@
 
 .wrapper .btns .PreviewImage {
     background: url('./assets/Frame\ 25.png') no-repeat;
+    width: 933px;
+    height: 601px;
 
 }
 
@@ -162,6 +164,7 @@
 .information p {
     color: #757575;
     font: 600 18px Monserrat;
+    margin-top: 30px;
 }
 
 .language .imgSprint {
@@ -169,6 +172,7 @@
     height: 145px;
     background: url('./assets/Group\ 11.png') no-repeat;
     background-size: contain;
+    margin-top: 80px;
 }
 
 .language .imgTasks {
@@ -176,6 +180,7 @@
     height: 145px;
     background: url('./assets/Group\ 10.png') no-repeat;
     background-size: contain;
+    margin-top: 80px;
 }
 
 .knowledge {
@@ -191,17 +196,20 @@
     display: flex;
     flex-direction: column;
     line-height: 100%;
+    padding-right: 20px;
 }
 
 .knowledgeText h1 {
 
     color: black;
     font: 400 48px 'Dela Gothic One';
+    margin-bottom: 30px;
 }
 
 .knowledgeText p {
     color: #757573;
     font: 600 18px 'Montserrat';
+    margin-bottom: 50px;
 }
 
 .knowledgeText .buttonKnowledge {
@@ -252,16 +260,19 @@
     display: flex;
     flex-direction: column;
     line-height: 100%;
+
 }
 
 .informationText h1 {
     color: black;
     font: 400 48px 'Dela Gothic One';
+
 }
 
 .informationText p {
     color: #757573;
     font: 600 18px 'Montserrat';
+    margin-top: 40px;
 }
 
 .informationText .buttonWatch {
@@ -272,6 +283,8 @@
     text-align: center;
     border-radius: 100px;
     background: #C3DCE3;
+    margin-top: 40px;
+    margin-right: 330px;
 }
 
 .watch .watchImg {
