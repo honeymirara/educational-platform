@@ -9,7 +9,7 @@
  
 .info h1 {
     color: #000;
-    font: 400 56px 'Dela Gothic One'
+    font: 400 80px 'Dela Gothic One'
 }
 
 .login .info {
@@ -23,19 +23,21 @@
 .info div input {
     border-radius: 2px;
     border: 1px solid #ced4da;
-    height: 60px;
-    width: 519px;
+    height: 80px;
+    width: 650px;
     padding: 0px 12px;
+    margin-top: 30px;
 }
 
 .info .btn {
     font: 700 16px 'Montserrat';
-    width: 100px;
+    width: 150px;
     padding: 14px 22px;
     text-align: center;
-    border-radius: 100px;
+    border-radius: 150px;
     background: var(--primaty-cyan-dark, #2B788B);
-    color: #fff
+    color: #fff;
+    margin-top: 30px;
 
 }
 
