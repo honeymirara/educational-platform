@@ -1,5 +1,5 @@
 .wrapper h1 {
-    font: 400 16px "Dela Gothic One";
+    font: 400 20px 'Dela Gothic One';
     color: black;
 
 }
@@ -20,13 +20,14 @@
 
 .wrapper .btns .loginBtn {
     color: black;
-    font: 700 16px 'Montserrat';
+    font: 700 18px 'Montserrat';
 }
 
 .wrapper .btns .regBtn {
-    color: #fff;
-    font: 700 16px 'Montserrat';
-    background-color: #287888;
+    color: white !important;
+    font: 700 18px 'Montserrat';
+    background: #287888;
     padding: 13px 21px;
     border-radius: 14px;
+    font-style: normal;
 }

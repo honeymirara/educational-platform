@@ -19,7 +19,8 @@ export default function Footer() {
             <div className={style.line}></div>
             <div className={style.network}>
                 <div className={style.icons}>
-                    <Icons data={['style.gt', 'style.kotik', 'style.imgYoutube']} />
+                <Icons data={['gt', 'kotik', 'imgYoutube']} />
+                  {/*   <Icons data={['style.gt', 'style.kotik', 'style.imgYoutube']} /> */}
                 </div>
                 <p>©2021 Hschool. Project for Hschool.</p>
             </div>
