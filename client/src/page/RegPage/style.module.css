@@ -18,11 +18,13 @@
 }
 
 .wrapper div input {
-    width: 519px;
-    height: 60px;
+    font-size: 20px;
+    width: 650px;
+    height: 80px;
     padding: 0px 12px;
     border-radius: 2px;
     border: 1px solid #ced4da;
+    margin-top: 30px;
 
 }
 
@@ -33,10 +35,12 @@
 }
 
 .wrapper .btn {
-    font: 700 16px 'Montserrat';
-    border-radius: 100px;
+    font: 700 20px 'Montserrat';
+    border-radius: 150px;
     background: #2b788b;
-    width: 110px;
+    width: 150px;
     padding: 14px 22px;
     color: #fff;
+    margin-top: 30px;
+    text-align: center;
 }

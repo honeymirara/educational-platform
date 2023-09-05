@@ -27,10 +27,11 @@
     width: 650px;
     padding: 0px 12px;
     margin-top: 30px;
+    font-size: 20px;
 }
 
 .info .btn {
-    font: 700 16px 'Montserrat';
+    font: 700 20px 'Montserrat';
     width: 150px;
     padding: 14px 22px;
     text-align: center;
