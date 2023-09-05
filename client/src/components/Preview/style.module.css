@@ -17,6 +17,7 @@
 }
 
 .wrapper .btns .info {
+    font: 700 20px Montserrat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -26,12 +27,9 @@
 
 .wrapper .btns .info p {
     color: #2B788B;
-    font-family: Montserrat;
-    font-size: 16px;
+    font: 700 20px Montserrat;
     font-style: normal;
-    font-weight: 700;
     line-height: 100%;
-    /* 16px */
     letter-spacing: 2.24px;
     text-transform: uppercase;
 }
@@ -39,24 +37,18 @@
 .wrapper .btns .info h1 {
     width: 500px;
     color: black;
-    font-family: Dela Gothic One;
-    font-size: 56px;
+    font: 400 56px Dela Gothic One;
     font-style: normal;
-    font-weight: 400;
     line-height: 120%;
-    /* 67.2px */
     letter-spacing: -2.24px;
 
 }
 
 .wrapper .btns .info p {
     color: #757575;
-    font-family: Montserrat;
-    font-size: 18px;
+    font: 600 18px Montserrat;
     font-style: normal;
-    font-weight: 600;
     line-height: 140%;
-    /* 25.2px */
     letter-spacing: -0.72px;
 
 }
@@ -73,12 +65,9 @@
 
 .wrapper .btns .info .statistics {
     color: #000;
-    font-family: Dela Gothic One;
-    font-size: 40px;
+    font: 400 40px Dela Gothic One;
     font-style: normal;
-    font-weight: 400;
     line-height: 100%;
-    /* 40px */
     letter-spacing: -0.8px;
 }
 
@@ -104,12 +93,9 @@
 
 .wrapper .btns .info .statistics .students {
     color: #585858;
-    font-family: Montserrat;
-    font-size: 16px;
+    font: 600 16px Montserrat;
     font-style: normal;
-    font-weight: 600;
     line-height: 140%;
-    /* 22.4px */
     letter-spacing: -0.64px;
 }
 
@@ -163,7 +149,7 @@
 
 .information p {
     color: #757575;
-    font: 600 18px Monserrat;
+    font: 600 20px Monserrat;
     margin-top: 30px;
 }
 
@@ -208,17 +194,17 @@
 
 .knowledgeText p {
     color: #757573;
-    font: 600 18px 'Montserrat';
+    font: 600 20px 'Montserrat';
     margin-bottom: 50px;
 }
 
 .knowledgeText .buttonKnowledge {
-    width: 131px;
+    width: 150px;
     padding: 14px 0px;
     color: #2B788B;
-    font: 700 16px 'Montserrat';
+    font: 700 20px Montserrat;
     text-align: center;
-    border-radius: 100px;
+    border-radius: 150px;
     background: #C3DCE3;
 
 }
@@ -271,17 +257,17 @@
 
 .informationText p {
     color: #757573;
-    font: 600 18px 'Montserrat';
+    font: 600 20px 'Montserrat';
     margin-top: 40px;
 }
 
 .informationText .buttonWatch {
-    width: 131px;
+    width: 150px;
     padding: 14px 0px;
     color: #2B788B;
-    font: 700 16px 'Montserrat';
+    font: 700 20px 'Montserrat';
     text-align: center;
-    border-radius: 100px;
+    border-radius: 150px;
     background: #C3DCE3;
     margin-top: 40px;
     margin-right: 330px;
