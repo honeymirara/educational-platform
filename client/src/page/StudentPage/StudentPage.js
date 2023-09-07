@@ -2,27 +2,9 @@ import Header from "../../components/Header/Header"
 import Footer from '../../components/Footer/Footer'
 import style from './style.module.css';
 import { Link } from "react-router-dom";
+import arr from '../../storage/course.json';
 
 export default function StudentPage() {
-    const arr = [{
-        id: 1,
-        name: 'Javascript',
-        text: 'JavaScript is a practical course where students learn the basics of JavaScript. It covers variables, operators, conditionals, loops, functions, and data manipulation.',
-        image: './assets/image\ 55.png'
-    },
-    {
-        id: 2,
-        name: 'Typescript',
-        text: "TypeScript is a course that provides an introduction to TypeScript. Students will learn about TypeScript's key features, such as type annotations, interfaces, classes, and modules",
-        image: './assets/developer.jpg'
-    },
-    {
-        id: 3,
-        name: 'Python',
-        text: 'Students will learn about variables, data types, conditionals, loops, functions, and file handling. Through hands-on exercises and projects, students will gain proficiency in writing Python code and solving real-world problems.',
-        image: './assets/code.jpg'
-    }];
-
     return (
         <>
             <Header />
