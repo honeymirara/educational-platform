@@ -23,7 +23,7 @@
     font: 700 18px 'Montserrat';
 }
 
-.wrapper .btns .regBtn {
+.wrapper .btns .regBtn a {
     color: white !important;
     font: 700 18px 'Montserrat';
     background: #287888;
