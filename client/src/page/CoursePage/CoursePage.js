@@ -17,7 +17,7 @@ export default function CoursePage() {
     return (
         <>
             <Header />
-            <div className={style.container}>
+            < div className={style.container}>
                 <div className={style.course}>
                     <div className={style.flex}>
                         <div className={style.img}></div>
@@ -29,8 +29,18 @@ export default function CoursePage() {
                     <div className={style.btn}>Go to Course</div>
                 </div>
 
-                <div className={style.lessons}></div>
+                <div className={style.lessons}>
+                    <div className={style.text}>
+                        <div className={style.informationLesson}>
+                            <h3>15 Lessons</h3>
+                            <p>1.Test</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
+
             <Footer />
         </>
     )

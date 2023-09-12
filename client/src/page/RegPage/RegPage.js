@@ -28,11 +28,11 @@ export default function RegPage() {
                     <Input arr={arr} value={value} setValue={setValue} />
                     <div className={style.btn} onClick={show}>Sign Up</div>
                 </div>
-
                 <div className={style.signUpImg}></div>
+                
             </div>
-            <Footer />
-        </div >
 
+            <Footer />
+        </div>
     )
 } 
