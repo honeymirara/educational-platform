@@ -34,6 +34,8 @@ export default function CoursePage() {
                         <div className={style.informationLesson}>
                             <h3>15 Lessons</h3>
                             <p>1.Test</p>
+                            <p>2.Test</p>
+                            <p>3.Test</p>
                         </div>
 
                     </div>
