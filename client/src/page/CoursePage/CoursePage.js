@@ -6,6 +6,8 @@ import Footer from '../../components/Footer/Footer'
 import style from './style.module.css';
 
 
+
+
 export default function CoursePage() {
     const { id } = useParams()
     const [value, setValue] = useState({})
@@ -41,8 +43,7 @@ export default function CoursePage() {
                     </div>
                 </div>
             </div>
-
-
+           
             <Footer />
         </>
     )

@@ -3,8 +3,28 @@ import Footer from '../../components/Footer/Footer'
 import style from './style.module.css';
 import { Link } from "react-router-dom";
 import arr from '../../storage/course.json';
+import { Pagination } from '@mui/material';
+import { useState, useEffect } from 'react';
+
+
 
 export default function StudentPage() {
+    const [elements, setElements] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const elementsPerPage = 3;
+
+    useEffect(() =>
+        setElements(arr), [currentPage])
+
+    const indexLastElement = currentPage * elementsPerPage; //1*3, 2*3, 3*3
+    const indexFirstElement = indexLastElement - elementsPerPage; //3-3, 6-3, 9-3
+    const currentElements = elements.slice(indexFirstElement, indexLastElement); //slice(0,3); 3,6; 6,9
+
+    function updateData(event, page) {
+        console.log(page);
+        setCurrentPage(page);
+    }
+
     return (
         <>
             <Header />
@@ -14,7 +34,7 @@ export default function StudentPage() {
                 </div>
                 <div className={style.list}>
                     {
-                        arr.map((el) => (
+                        currentElements.map((el, index) => (
                             <Link to={`/course/${el.id}`}>
                                 <div className={style.courseContainer}>
                                     <div className={style.imageCourse1}></div>
@@ -25,16 +45,22 @@ export default function StudentPage() {
                                 </div>
                             </Link>
                         )
-                        )
-                    }
+                    )}
                 </div>
 
                 <h1></h1>
             </div>
+            <div className={style.pagination}>
+            <Pagination
+                value={currentPage}
+                onChange={updateData}
+                count={Math.ceil(arr.length / elementsPerPage)}
+                color="primary"
+                hideNextButton={false}
+            />
+            </div>
+
             <Footer />
-
-
         </>
-
     )
 }
