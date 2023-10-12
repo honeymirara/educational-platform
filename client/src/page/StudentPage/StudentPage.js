@@ -2,9 +2,9 @@ import Header from "../../components/Header/Header"
 import Footer from '../../components/Footer/Footer'
 import style from './style.module.css';
 import { Link } from "react-router-dom";
-import arr from '../../storage/course.json';
 import { Pagination } from '@mui/material';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 
 
@@ -13,8 +13,16 @@ export default function StudentPage() {
     const [currentPage, setCurrentPage] = useState(1);
     const elementsPerPage = 3;
 
-    useEffect(() =>
-        setElements(arr), [currentPage])
+    async function getAllCourses() {
+        const response = await axios.get(`http://localhost:3001/course`)
+        console.log(response);
+        setElements(response.data)
+    }
+
+
+    useEffect(() => {
+        getAllCourses()
+    }, [currentPage])
 
     const indexLastElement = currentPage * elementsPerPage; //1*3, 2*3, 3*3
     const indexFirstElement = indexLastElement - elementsPerPage; //3-3, 6-3, 9-3
@@ -39,25 +47,23 @@ export default function StudentPage() {
                                 <div className={style.courseContainer}>
                                     <div className={style.imageCourse1}></div>
                                     <div className={style.informationCourse}>
-                                        <h2>{el.name}</h2>
-                                        <p>{el.text}</p>
+                                        <h2>{el.title}</h2>
+                                        {/* <p>{el.text}</p> */}
                                     </div>
                                 </div>
                             </Link>
                         )
-                    )}
+                        )}
                 </div>
-
-                <h1></h1>
             </div>
             <div className={style.pagination}>
-            <Pagination
-                value={currentPage}
-                onChange={updateData}
-                count={Math.ceil(arr.length / elementsPerPage)}
-                color="primary"
-                hideNextButton={false}
-            />
+                <Pagination
+                    value={currentPage}
+                    onChange={updateData}
+                    count={Math.ceil(elements.length / elementsPerPage)}
+                    color="primary"
+                    hideNextButton={false}
+                />
             </div>
 
             <Footer />

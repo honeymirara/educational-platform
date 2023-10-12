@@ -1,4 +1,4 @@
-import { getAllLessonDB, getLessonByIdDB, createLessonDB, updateLessonDB, deleteLessonDB } from "../repository/lesson.repository"
+import { getAllLessonDB, getLessonByIdDB, createLessonDB, updateLessonDB, deleteLessonDB } from "../repository/lessons.repository"
 
 async function getAllLesson() {
     const data = await getAllLessonDB();

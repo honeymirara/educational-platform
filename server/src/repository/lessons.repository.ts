@@ -1,4 +1,4 @@
-import pool from '../bd'
+import pool from '../db'
 
 async function getAllLessonDB() {
     const client = await pool.connect();

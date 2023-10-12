@@ -1,0 +1,37 @@
+.content {
+    margin: auth;
+    width: 1180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper h1 {
+    color: var(--primaty-black, #000);
+
+    /* Headings/Heading 1 */
+    font-family: Dela Gothic One;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    /* 67.2px */
+    letter-spacing: -2.24px;
+}
+
+.wrapper .btn {
+    display: flex;
+    width: 110px;
+    padding: 14px 22px;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.content .img {
+    background: url('./assets//ghost-img\ 1.png') no-repeat;
+    background-size: contain;
+    width: 394px;
+    height: 413px;
+
+
+}

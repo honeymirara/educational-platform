@@ -1,13 +1,13 @@
 import express, { Responce, Request } from 'express';
-import { getAllLesson, getLessonById, createLesson, updateLesson, deleteLesson } from "../service/lesson.service";
-import buildResponse from '../helper/buildResponse';
+import { getAllLesson, getLessonById, createLesson, updateLesson, deleteLesson } from "../service/lessons.service";
+import { buildResponse } from '../helper/buildResponse';
+
 
 const route = express.Router();
 
 route.get(`/`, async (req: Request, res: Responce): Promise<void> => {
     try {
-        const data = await getAllLesson()
-
+        const data = await getAllLesson();
         buildResponse(res, 200, data);
     } catch (err: any) {
         buildResponse(res, 404, err.message);

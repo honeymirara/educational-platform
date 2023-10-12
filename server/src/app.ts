@@ -5,6 +5,7 @@ import api from '../src/controller/api.controller'
 import course from '../src/controller/course.controller'
 import cors from 'cors';
 import cookieParser from 'cookie-parser'
+import lessons from '../src/controller/lessons.controller'
 
 
 
@@ -18,7 +19,7 @@ app.use(cookieParser())
 app.use('/user', user);
 app.use('/api', api);
 app.use('/course', course);
-
+app.use('/lessons', lessons);
 
 app.use((err, req: Request, res: Response, next: NextFunction) => {
     res.send(err.message);

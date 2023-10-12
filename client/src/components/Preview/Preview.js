@@ -1,5 +1,7 @@
 
 import style from './style.module.css'
+import { Link } from 'react-router-dom'
+import NotFoundPage from '../../page/NotFoundPage/NotFoundPage'
 
 export default function Header() {
     return (
@@ -11,18 +13,19 @@ export default function Header() {
                         <p>E-COURSE PLATFORM</p>
                         <h1>Learning and teaching online, made easy</h1>
                         <p>Any subject, in any language, on any device, for all ages</p>
-                        <div className={style.btnAbout}>About platform</div>
+                        <Link to={'/*'}><div className={style.btnAbout}>About platform</div>
+                        </Link>
                         <div className={style.statistics}>
                             <div>
                                 <div className={style.thunder}></div>
-                                <div  className={style.count}>600<span>+</span></div>
+                                <div className={style.count}>600<span>+</span></div>
                             </div>
                             <p>students</p>
                         </div>
                     </div>
                     <div className={style.PreviewImage}></div>
                 </div>
-               
+
             </div>
             <div className={style.wrapperBCG}>
                 <div className={style.language}>
