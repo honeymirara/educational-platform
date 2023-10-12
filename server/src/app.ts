@@ -8,6 +8,8 @@ import cookieParser from 'cookie-parser'
 
 
 
+
+
 const app = express()
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 app.use(bodyParser.json());
@@ -16,6 +18,7 @@ app.use(cookieParser())
 app.use('/user', user);
 app.use('/api', api);
 app.use('/course', course);
+
 
 app.use((err, req: Request, res: Response, next: NextFunction) => {
     res.send(err.message);
