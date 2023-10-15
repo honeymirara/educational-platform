@@ -9,23 +9,22 @@ function NotFoundPage() {
         <>
             <Header />
             <div className={style.content}>
-                <div className={style.wrapper}></div>
-
-                <p>Error 404</p>
-                <h1>Hey buddy</h1>
-                <p>We can't seem to find the page you are looking for</p>
-                <Link to={'/'}>
-                    <div className={style.btn}> return </div>
-                </Link>
+                <div className={style.wrapper}>
+                    <p>Error 404</p>
+                    <h1>Hey buddy</h1>
+                    <p>We can't seem to find the page you are looking for</p>
+                    <Link to={'/'}>
+                        <div className={style.btn}> return </div>
+                    </Link>
+                </div>
+                <div className={style.img}></div>
             </div>
-
-
             <div className={style.img}></div>
             <Footer />
-
         </>
     )
-
 }
+
+
 
 export default NotFoundPage;
