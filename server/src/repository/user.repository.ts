@@ -54,12 +54,11 @@ async function updateUserDB(name, surname, email, pwd, id): Promise<iUser[]> {
     } catch (err) {
         client.query('ROLLBACK');
         return [];
-
     };
 
 }
 
-async function deleteUserDB(id): Promise<iUser[]> {
+async function deleteUserDB(id:string): Promise<iUser[]> {
     const client = await pool.connect();
     try {
         await client.query('BEGIN');

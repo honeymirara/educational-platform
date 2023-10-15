@@ -20,7 +20,7 @@ export default function Header() {
             </h1>
             {token ? (
                 <div className={style.regBtn}>
-                    <p onClick={logOutUser} className={style.loginBtn}>Sign Out</p>
+                    <p onClick={logOutUser} className={style.signOut}>Sign Out</p>
                 </div>
             ) : (
                 <div className={style.btns}>

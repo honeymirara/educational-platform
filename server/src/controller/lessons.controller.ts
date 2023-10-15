@@ -3,9 +3,9 @@ import { getAllLesson, getLessonById, createLesson, updateLesson, deleteLesson }
 import { buildResponse } from '../helper/buildResponse';
 
 
-const route = express.Router();
+const lessons = express.Router();
 
-route.get(`/`, async (req: Request, res: Responce): Promise<void> => {
+lessons.get(`/`, async (req: Request, res: Responce): Promise<void> => {
     try {
         const data = await getAllLesson();
         buildResponse(res, 200, data);
@@ -14,7 +14,7 @@ route.get(`/`, async (req: Request, res: Responce): Promise<void> => {
     }
 })
 
-route.get(`/:course_id`, async (req: Request, res: Responce): Promise<void> => {
+lessons.get(`/:course_id`, async (req: Request, res: Responce): Promise<void> => {
     try {
         const { course_id } = req.params;
         const data = await getLessonById(course_id)
@@ -25,7 +25,7 @@ route.get(`/:course_id`, async (req: Request, res: Responce): Promise<void> => {
     }
 })
 
-route.post(`/`, async (req: Request, res: Responce): Promise<void> => {
+lessons.post(`/`, async (req: Request, res: Responce): Promise<void> => {
     try {
         const { course_id, title } = req.body;
         const data = await createLesson(course_id, title)
@@ -36,7 +36,7 @@ route.post(`/`, async (req: Request, res: Responce): Promise<void> => {
     }
 })
 
-route.put(`/:id`, async (req: Request, res: Responce): Promise<void> => {
+lessons.put(`/:id`, async (req: Request, res: Responce): Promise<void> => {
     try {
         const { id } = req.params;
         const { course_id, title } = req.body;
@@ -48,7 +48,7 @@ route.put(`/:id`, async (req: Request, res: Responce): Promise<void> => {
     }
 })
 
-route.delete(`/:id`, async (req: Request, res: Responce): Promise<void> => {
+lessons.delete(`/:id`, async (req: Request, res: Responce): Promise<void> => {
     try {
         const { id } = req.params;
         const data = await deleteLesson(id)
@@ -60,4 +60,4 @@ route.delete(`/:id`, async (req: Request, res: Responce): Promise<void> => {
     }
 })
 
-export default route;
+export default lessons;

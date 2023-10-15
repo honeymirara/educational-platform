@@ -24,13 +24,12 @@ function CoursePage() {
 
     async function getAllLessons() {
         const response = await axios.get(`http://localhost:3001/lessons/${id}`);
-        console.log(response.data);
+        console.log(response);
         setLesson(response.data)
     }
 
     useEffect(() => {
-        console.log(id);
-        console.log(course_id);
+        console.log(value)
         getAllCourses();
         getAllLessons()
     }, [])
@@ -63,7 +62,6 @@ function CoursePage() {
                     </div>
                 </div>
             </div>
-
             <Footer />
         </>
     )

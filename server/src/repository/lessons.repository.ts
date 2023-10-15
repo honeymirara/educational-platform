@@ -1,58 +1,81 @@
 import pool from '../db'
+import { iLessons } from '../interfaces/index'
 
-async function getAllLessonDB() {
+async function getAllLessonDB(): Promise<iLessons[]> {
     const client = await pool.connect();
-
-    const sql = `SELECT * FROM lessons`
-
-    const data = (await client.query(sql)).rows;
-
-    return data;
+    try {
+        const sql = `SELECT * FROM lessons`
+        const data = (await client.query(sql)).rows;
+        client.query('COMMIT');
+        return data;
+    } catch (err) {
+        await client.query('ROLLBACK');
+        return [];
+    }
 }
 
-async function getLessonByIdDB(course_id: string) {
+async function getLessonByIdDB(course_id: string): Promise<iLessons[]> {
     const client = await pool.connect();
-
-    const sql = `SELECT * FROM lessons WHERE course_id = $1`
-
-    const data = (await client.query(sql, [course_id])).rows;
-
-    return data;
+    try {
+        await client.query('BEGIN');
+        const sql = `SELECT * FROM lessons WHERE course_id = $1`
+        const data = (await client.query(sql, [course_id])).rows;
+        client.query('COMMIT');
+        return data;
+    } catch (err) {
+        await client.query('ROLLBACK');
+        return [];
+    }
 }
 
-async function createLessonDB(course_id: string, title: string) {
+async function createLessonDB(course_id: string, title: string): Promise<iLessons[]> {
     const client = await pool.connect();
-
-    const sql = `INSERT INTO lessons (course_id, title) 
+    try {
+        await client.query('BEGIN');
+        const sql = `INSERT INTO lessons (course_id, title) 
     VALUES ($1, $2) RETURNING *`
-
-    const data = (await client.query(sql, [course_id, title])).rows;
-    return data;
+        const data = (await client.query(sql, [course_id, title])).rows;
+        client.query('COMMIT');
+        return data;
+    } catch (err) {
+        await client.query('ROLLBACK');
+        return [];
+    }
 }
 
-async function updateLessonDB(id: string, course_id: string, title: string) {
+async function updateLessonDB(id: string, course_id: string, title: string): Promise<iLessons[]> {
     const client = await pool.connect();
-
-    const sql = `UPDATE lessons 
+    try {
+        client.query('BEGIN');
+        const sql = `UPDATE lessons 
     SET course_id = $2, title = $3
     WHERE id = $1
     RETURNING *`
 
-    const data = (await client.query(sql, [id, course_id, title])).rows
+        const data = (await client.query(sql, [id, course_id, title])).rows
+        client.query('COMMIT');
+        return data;
+    } catch (err) {
+        client.query('ROLLBACK');
+        return [];
 
-    return data;
+    };
 }
 
-async function deleteLessonDB(id: string) {
+async function deleteLessonDB(id: string): Promise<iLessons[]> {
     const client = await pool.connect();
-
-    const sql = `DELETE FROM lessons 
+    try {
+        client.query('BEGIN');
+        const sql = `DELETE FROM lessons 
     WHERE id = $1
     RETURNING *`
-
-    const data = (await client.query(sql, [id])).rows
-
-    return data;
+        const data = (await client.query(sql, [id])).rows
+        client.query('COMMIT');
+        return data;
+    } catch (err) {
+        client.query('ROLLBACK');
+        return [];
+    };
 }
 
 

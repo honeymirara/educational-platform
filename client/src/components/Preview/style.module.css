@@ -61,6 +61,7 @@
     gap: 19px;
     border-radius: 100px;
     background: #C3DCE3;
+    cursor: pointer;
 }
 
 .wrapper .btns .info .statistics {
@@ -206,7 +207,7 @@
     text-align: center;
     border-radius: 150px;
     background: #C3DCE3;
-
+    cursor: pointer;
 }
 
 .knowledgeImg {

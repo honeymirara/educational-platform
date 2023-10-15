@@ -39,7 +39,7 @@
     background: var(--primaty-cyan-dark, #2B788B);
     color: #fff;
     margin-top: 30px;
-
+    cursor: pointer;
 }
 
 .login .loginImg{

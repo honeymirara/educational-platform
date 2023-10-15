@@ -6,9 +6,15 @@ interface iUser {
     pwd: string;
 }
 
-interface iCourse{
+interface iCourse {
     id: number;
     title: string;
 }
 
-export {iUser, iCourse}
+interface iLessons {
+    id: string;
+    title: string;
+    course_id: string;
+}
+
+export { iUser, iCourse, iLessons }
