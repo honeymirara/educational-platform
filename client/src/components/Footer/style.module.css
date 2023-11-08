@@ -17,7 +17,12 @@
     margin: 5px 0;
     color: var(--primaty-grey-dark, #757575);
     font: 600 14px 'Montserrat';
-    
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        color: var(--primaty-grey-dark, #474747);
+    }
 
 }
 
@@ -45,7 +50,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
-
+    cursor: pointer;
 }
 
 .icons .gt {
