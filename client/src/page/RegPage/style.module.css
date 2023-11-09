@@ -43,4 +43,10 @@
     color: #fff;
     margin-top: 30px;
     text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        background: var(--primaty-cyan-dark, #19505e);
+    }
 }

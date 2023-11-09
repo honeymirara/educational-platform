@@ -6,7 +6,7 @@
     align-items: center;
 
 }
- 
+
 .info h1 {
     color: #000;
     font: 400 80px 'Dela Gothic One'
@@ -40,10 +40,15 @@
     color: #fff;
     margin-top: 30px;
     cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        background: var(--primaty-cyan-dark, #19505e);
+    }
 }
 
-.login .loginImg{
+.login .loginImg {
     width: 481px;
     height: 320px;
-    background: url('./assets/image\ 33.png') no-repeat;  
+    background: url('./assets/image\ 33.png') no-repeat;
 }

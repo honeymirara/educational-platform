@@ -5,7 +5,7 @@ export default function Input({ arr, value, setValue }) {
     }
 
     const result = arr.map((el, index) => (
-        <div key={index}>.
+        <div key={index}>
             <input type="text" name={el} onChange={setInputValue} placeholder={el} />
         </div>
     ))

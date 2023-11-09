@@ -36,7 +36,6 @@ export default function AuthPage() {
                     <h1>Login</h1>
                     <Input arr={arr} value={value} setValue={setValue} />
                     <div className={style.btn} onClick={show}>Login</div>
-
                 </div>
                 <div className={style.loginImg}></div>
             </div>
