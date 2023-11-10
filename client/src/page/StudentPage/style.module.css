@@ -57,7 +57,7 @@
     align-items: center;
     width: 510px;
     text-align: center;
-    }
+}
 
 .informationCourse h2 {
     font: 700 30px Dela Gothic One;
@@ -71,4 +71,10 @@
     letter-spacing: -0.64px;
     font-style: normal;
     padding: 15px 40px 40px 40px;
+}
+
+.pagination {
+    padding: 48px;
+    display: flex;
+    justify-content: center;
 }

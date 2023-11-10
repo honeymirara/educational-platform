@@ -65,8 +65,7 @@ export default function StudentPage() {
                     hideNextButton={false}
                 />
             </div>
-
-            <Footer />
+ <Footer />
         </>
     )
 }
